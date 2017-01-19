@@ -69,3 +69,66 @@ The format git tags will be given after version has been updated. `%s` will be r
 
 The logger to use when printing info messages. By default this just logs the messages with no formatting to STDOUT.
 If you want to suppress logging you can just use `Logger.new "/dev/null"`
+
+## Example
+
+Here is an example of what happens when you release a new version.
+
+Given a version file `lib/my_gem/version.rb` which looks like this:
+
+```ruby
+
+module MyGem
+  VERSION = "1.2.3"
+end
+
+```
+
+And a file `history.rdoc` which looks like this:
+
+```
+* Some important work
+* Some bug fixes
+```
+
+And a rake task `tasks/release.rake` loaded by your Rakefile which looks like this:
+
+```ruby
+require "version_manager/rake_task"
+
+VersionManager::RakeTask.new do |config|
+  config.version_file = "lib/my_gem/version.rb"
+  config.version_constant = "MyGem::VERSION"
+end
+```
+
+You can create a new release by using one of the following command:
+
+    bundle exec rake release:major
+    bundle exec rake release:minor
+    bundle exec rake release:patch
+
+When you do this 3 things will happen:
+
+* The version file will be rewritten to contain the new version
+```ruby
+module MyGem
+  VERSION = "2.0.0"
+end
+
+```
+
+* This history file will have a new line containing the new version and today's date
+```
+== v2.0.0 (19 January 2017)
+
+* Some important work
+* Some bug fixes
+```
+
+* The history and version files are both commited and tagged in git
+
+The only things left to do then is push your new tag and commit then deploy the new release
+  
+
+
