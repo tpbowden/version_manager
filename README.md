@@ -1,5 +1,7 @@
 # Version Manager
 
+[![Build Status](https://travis-ci.org/tpbowden/version_manager.svg?branch=master)](https://travis-ci.org/tpbowden/version_manager) [![Code Climate](https://codeclimate.com/github/tpbowden/version_manager/badges/gpa.svg)](https://codeclimate.com/github/tpbowden/version_manager) [![Gem Version](https://badge.fury.io/rb/version_manager.svg)](https://badge.fury.io/rb/version_manager)
+
 Automatically manage version updates and tagging. The new version will be written to your version file,
 history file and as a tagged git commit.
 
