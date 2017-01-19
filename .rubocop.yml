@@ -1,0 +1,43 @@
+---
+AllCops:
+  TargetRubyVersion: 2.2
+  DisplayCopNames: true
+Documentation:
+  Enabled: false
+Lint/PercentStringArray:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Metrics/MethodLength:
+  Max: 5
+Performance/RedundantMerge:
+  Enabled: false
+Style/AndOr:
+  EnforcedStyle: conditionals
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
+Style/MultilineArrayBraceLayout:
+  Enabled: false
+Style/MultilineMethodCallBraceLayout:
+  Enabled: false
+Style/NestedParenthesizedCalls:
+  Enabled: false
+Style/PredicateName:
+  NamePrefixBlacklist:
+  - is_
+Style/SpaceInsideBlockBraces:
+  SpaceBeforeBlockParameters: false
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+Style/VariableNumber:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
