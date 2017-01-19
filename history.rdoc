@@ -1,3 +1,9 @@
+== v1.0.1 (19 January 2017)
+
+* More detailed documentation
+* Example of use in README
+* Add a license
+
 == v1.0.0 (19 January 2017)
 
 * Initial release
