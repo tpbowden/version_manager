@@ -1,3 +1,4 @@
+require "date"
 require "version_manager/version_tagger"
 
 module VersionManager

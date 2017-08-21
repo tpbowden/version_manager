@@ -1,3 +1,4 @@
+require "tempfile"
 require "version_manager"
 require "version_manager/version_updater"
 
