@@ -1,3 +1,7 @@
+== v1.0.2 (21 August 2017)
+
+* Add missing requires
+
 == v1.0.1 (19 January 2017)
 
 * More detailed documentation
